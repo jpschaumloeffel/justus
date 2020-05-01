@@ -1,8 +1,8 @@
-extern crate justus;
 extern crate diesel;
+extern crate justus;
 
 use self::justus::*;
-use std::io::{stdin, Read};
+use std::io::stdin;
 
 fn main() {
     let connection = establish_connection();
@@ -17,4 +17,3 @@ fn main() {
     let account = create_account(&connection, name);
     println!("\nSaved account with id {}", account.id);
 }
-
